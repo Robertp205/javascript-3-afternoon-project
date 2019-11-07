@@ -52,8 +52,48 @@ var employees = [
 
 //Code Here
 
+const employeeUpdater = () => {
+
+  for(let i = 0; i < employees.length; i++){
+
+    if(employees[i].firstName === 'Theo'){
+
+      employees.splice(i,1)
+
+    }
+
+    if(employees[i].firstName === 'Lorie'){
+
+      employees[i].department = 'HR'
+
+    }
+
+  }
+
+  return employees
+
+}
+// function employeeUpdater(){
+//   for(let person in employees ){
+//     for(let firstName in employees[person]){
+//       if(firstName === "Theo"){
+//         return firstName.remove
+//       }
+//     }
+    
+//     // nested for in loop
+//     // for(let candy in people[person]){
+//     //     console.log(people[person][candy]);
+//     // }
+// };
+// } 
 
 
+// for(let i = 0; i < employees.length; i++){
+//   if(employees[i] === Theo){
+//      employees[Theo].remove()
+//   }
+// }
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
@@ -69,6 +109,25 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+const removeDuplicates = () => {
+
+  for(let i = 0; i < workplaceAccidents.length; i++){
+
+    for(let j = i +1; j < workplaceAccidents.length; j++){
+
+      if(workplaceAccidents[i] === workplaceAccidents[j]){
+
+        workplaceAccidents.splice(j, 1)
+
+      }
+
+    }
+
+  }
+
+  return workplaceAccidents
+
+}
 
 
 
@@ -97,8 +156,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+// var grumpyActivity;
+// var fluffy2ndFriend;
 
 
 
@@ -158,5 +217,18 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
-
+function looper(){
+for(let i = 0; i < numsArr.length; i++){
+  // nested loop, this will loop through the array at the current index value
+  for(let j = 0; j < numsArr[i].length; j++){
+    if(numsArr[j] % 2 === 0){
+      return numsArr.push('even')
+    } else {
+      return numsArr.push('odd')
+    }
+    // if(numsArr[j] % 2 === 1){
+    //   return numsArr.push('odd')
+    // }
+    // return numsArr
+  }
+}}
